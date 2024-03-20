@@ -58,10 +58,8 @@ class PanelHelper {
                           .copyWith(color: Theme.of(context).primaryColor)),
                   Container(height: 20),
                   Text("Base url:",
-                      style: Theme.of(context)
-                          .textTheme
-                          .subtitle2!
-                          .copyWith(color: Theme.of(context).accentColor)),
+                      style: Theme.of(context).textTheme.subtitle2!.copyWith(
+                          color: Theme.of(context).colorScheme.primary)),
                   Text(DioHelper.baseUrl,
                       style: Theme.of(context)
                           .textTheme
@@ -114,7 +112,7 @@ class PanelHelper {
           style: Theme.of(context)
               .textTheme
               .subtitle2!
-              .copyWith(color: Theme.of(context).accentColor)),
+              .copyWith(color: Theme.of(context).colorScheme.secondary)),
       Row(children: <Widget>[
         Expanded(child: TextField(controller: controller)),
         for (var w in _buildRequestButton(context, request)) w,
